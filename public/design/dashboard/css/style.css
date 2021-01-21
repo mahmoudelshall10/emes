@@ -1,0 +1,1157 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+ 
+ body{
+    background-color:#272727;
+    min-height: 1000px;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+::placeholder{
+    color:#252525;
+    font-weight: 300
+}
+
+/* start nav bar  */
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 1;
+   
+}
+nav.black{
+    background: #1d1d1d;
+    z-index: 100;
+}
+
+
+
+nav .logo{
+    float: left;
+}
+nav .logo img{  
+    height: 70px;
+    transition:.5s;
+}
+
+.menu-btn{
+    display: none;
+}
+nav ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav ul li{ 
+    list-style: none;
+    display: inline;
+}
+nav ul li a,#logIn,#signUp {
+    display: block;
+    line-height: 60px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 5px 20px;
+    transition: .5s;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li ul{
+    display: block;
+     position: absolute;
+     opacity: 0;
+     transition: .5s;
+     visibility: hidden;
+     transform: translatey(0px);
+     background: #1d1d1d;
+ }
+
+ nav ul li:hover ul{
+     opacity: 1;
+     visibility: visible
+ } 
+  nav ul li ul li:hover ul{
+     opacity: 1;
+    display: inline-block;
+     } 
+nav ul li ul li a,#logIn,#signUp{
+    padding: 1px 10px;
+    margin-top:1%; 
+    box-shadow: 0 2px 5px rgb(0, 0, 0, .5);
+    white-space: nowrap;
+}
+
+.active,nav ul li a:hover{
+    color:#f4742a;
+    text-decoration: none;
+}
+
+.knowledge-list,
+.management-list,
+.mep-list,
+.architecture-list{
+    position: absolute;
+    right:100%;
+    top: 0;
+    transition: .6s;
+    color:#fff;
+    display: none;
+    }
+
+.structure-list{
+    position: absolute;
+    right:100%;
+    top:80%;
+    transition: .6s;
+    color:#fff;
+    display: none;
+}
+#logIn,#signUp{
+    cursor: pointer;
+}
+
+#logIn:hover,#signUp:hover{
+    color:#f4742a;
+}
+
+nav ul li ul li a,#logIn,#signUp{
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 5px 20px;
+    transition: .5s;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+nav .btn{
+    margin: 0 5% 0 -5%;
+    background: #f4742a;
+    border: none;
+}
+nav .btn .fas{
+font-size: 20px;
+color: #ffffff;
+padding: 5%;
+}
+nav .btn:hover{
+background-color: #f4742a
+}
+
+
+
+/* end nav bar  */
+
+
+/* -------------------------------------------responsive nav  */
+.res-nav{
+    display: none;
+}
+
+
+
+
+/*------------------------------------------ end responsive nav  */
+
+/* start slider  */
+/* .slider{
+margin-top:80px;
+} */
+.slider .carousel-item{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.sld1{
+    background-image: url('../images/summit.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld1 span{
+    text-align: center;
+    position: relative;
+    top:28%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 26vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: .5s;
+}
+.sld1 h1{
+    text-align: center;
+    position: relative;
+    top:28%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 9.7vh;
+    color:hsl(0, 0%, 100%);
+    animation-delay: 1.2s;
+}
+
+
+.sld2{
+    background-image: url('../images/meeting2.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld2 h1{
+    text-align: center;
+    position: relative;
+    top:28%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 9.7vh;
+    color:#fff;
+    animation-delay: 1.5s;
+
+}
+.sld2 span{
+    text-align: center;
+    position: relative;
+    top:28%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    display: block;
+    font-size: 20vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: .5s;
+
+}
+
+.sld3{
+    background-image: url('../images/planning.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld3 h1{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 11vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+.sld3 span{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 22vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.3s;
+}
+
+.sld4{
+   background-image: url('../images/service.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld4 span{
+     text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 22vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.5s;
+
+}
+.rotateInDownRight{
+  text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 11vh;
+    color:#fff;
+    animation-delay: .1s;
+}
+.rotateInUpLeft{
+  text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 11vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+
+.sld5{
+   background-image: url('../images/arch4.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld5 h1{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 15vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+.sld5 span{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 18vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.3s;
+}
+
+.sld6{
+   background-image: url('../images/arch2.jpg');
+   width: 100%;
+   background-position: center center;
+}
+.sld6 h1{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 15vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+.sld6 span{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 18vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.3s;
+}
+
+.sld7{
+   background-image: url('../images/pla.jpg');
+    width: 100%;
+    background-position: center center;
+
+}
+.sld7 h1{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 15vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+.sld7 span{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 18vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.3s;
+}
+
+.sld8{
+    background-image: url('../images/meeting.jpg');
+    width: 100%;
+    background-position: center center;
+}
+.sld8 h1{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 15vh;
+    color:#fff;
+    animation-delay: .5s;
+}
+.sld8 span{
+    text-align: center;
+    position: relative;
+    top:25%;
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    display: block;
+    font-size: 18vh;
+    color:#f4742a;
+    line-height: 150px;
+    animation-delay: 1.3s;
+}
+.overlay{
+    position: relative;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color:rgba(49, 49, 49, 0.822);
+}
+
+/* end slider  */
+
+
+/* start questions section  */
+.questions{
+    padding: 60px 0;
+    margin: 5%;
+}
+.section-header{
+    text-align: center;
+    margin:3%;
+    text-transform: uppercase;
+    font-size: 65px;
+    color:#fff;
+    font-family: 'Big Shoulders Display', cursive;
+    letter-spacing: 5px;
+}
+.card{
+    border:none;
+    background: rgb(255, 255, 255);
+    height: 350px;
+    border: #272727 solid 3px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    border-radius: 15px;
+    box-shadow: #afaaaa 5px ;
+}
+.card h4{
+    font-size: 60px;
+    font-weight: bolder;
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+.card p{
+    font-size:23px ;   
+    font-weight: bolder;
+    margin-top:40px;
+}
+
+.image-area{
+    width:350px;
+    height: 350px;
+    display: inline-block;
+}
+.fas{
+ letter-spacing: 5px;
+ font-size: 100px;
+ color:#f4742a;
+ display: block;
+ margin-top: 15%;
+}
+.define:hover .side-two{
+    transform: rotateY(0deg);
+    border-radius: 5px;
+}
+.define:hover .side-one{
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.content-area{
+    transform: perspective(1000px);
+    transition: 1s;
+    transform-style:preserve-3d;
+    position: relative;
+}
+.side-one{
+    position: relative;
+    transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom:30px; 
+}
+.side-two{
+    position: absolute;
+    top:0;
+    left:0;
+    background:#FFF;
+    transform:rotateY(-180deg);
+}
+.side-one,
+.side-two{
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+.side-one .card,
+.side-two .card{
+    min-height: 312px;
+}
+
+/* end question section  */
+hr{
+    width:50%;
+    border: 2px solid #fff;
+}
+
+/* start services  & products */
+.tab-pane{
+    display: flex;
+}
+
+
+.container h2{
+   text-align: center;
+   margin:5%;
+   text-transform: uppercase;
+   font-size: 65px;
+   color:#fff;
+   font-family: 'Big Shoulders Display', cursive;
+   letter-spacing: 5px;
+}
+
+.nav-link {
+   text-transform: uppercase;
+   font-size: 25px;
+   letter-spacing: 5px;
+   font-family: 'Big Shoulders Display', cursive;
+   color:#fff;
+} 
+
+.main-links{
+    margin: 3% 0 ;
+    list-style: none;
+    display: flex;
+    width:100%;
+}
+
+.main-links li {
+   display: flex;
+   justify-content: space-around;
+    color:#fff;
+    display: inline;
+    margin: 1% auto;
+}
+.main-links li a{
+    color:#fff;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+.main-links li{
+    height: 30px;
+}
+.main-links li :hover{
+    color:#f4742a;
+    text-decoration: none;
+}
+
+ 
+/* start sub links  */
+.sub-links{
+    background: #fcfcfc;
+    border:2px solid rgb(24, 24, 24);
+    border-radius: 10px;
+    display: inline-block;
+    width: 45%;
+    padding: 3% 3% 3% 1%;
+    min-height: 350px; 
+    margin: 1%
+}
+h5{
+    text-align: center;
+    color:#272727;
+    margin-bottom: 3%;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.knowledge-learning-links,
+.management-links,
+.mep-links,
+.architecture-links,
+.structure-links,
+.knowledge-description,
+.elearning-description,
+.manage-est-budg-description,
+.manage-plan-pack-description,
+.manage-rol-wave-description,
+.manage-monitor-control-description,
+.manage-ready-forms-description,
+.manage-report-forms-description,
+.mep-hvac-description,
+.mep-plumbing-description,
+.mep-fire-description,
+.mep-electrical-description,
+.mep-low-current-description,
+.mep-boq-description,
+.mep-outline-description,
+.arch-interior-description,
+.arch-urban-description,
+.arch-exterior-description,
+.arch-boq-description,
+.arch--outline-description,
+.struc-interion-description,
+.struc-boq-description,
+.struc-outline-description
+{
+    display: none;
+    
+}
+
+.sub-links li a{
+    color:rgb(32, 32, 32);
+    font-size: 17px;
+    text-transform: capitalize;
+}
+/* end sub links  */
+
+/*start texted area  */
+.texted-area-js{
+    background: #fcfcfc;
+    border:2px solid rgb(24, 24, 24);
+    border-radius: 10px;
+    display: inline-block;
+    width: 45%;
+    float: right;
+    padding: 3% 3% 3% 1%;
+    min-height: 350px; 
+    margin: 1%
+}
+.texted-area-js {
+    color:#272727;
+     padding: 3%;
+}
+.know-description,
+.manage-description,
+.mep-description,
+.arch-description,
+.struc-description{
+    list-style: none;
+    color: #272727;
+   
+}
+
+
+
+/* end texted area  */
+
+/* products style  */
+.main-links-products{
+
+}
+.main-links-products ul li a{
+    /* color:#272727 */
+}
+
+.important{
+    margin-bottom:10%; 
+}
+
+/* end products style  */
+
+
+
+
+/* end services & products */
+
+
+/* start footer  */
+
+/* start contact box  */
+footer{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+.contacts,
+.comment{
+    width: 45%;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+}
+footer h2 {
+    font-size: 7vh;
+    letter-spacing: 2px;
+    margin: 3% auto 0;
+    color:#fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 65px;
+}
+
+.contacts span{
+    margin-left:1%; 
+}
+.egypt-contacts,
+.saudia-contacts,
+.emirates-contacts{
+      margin: 10% 0 0;
+}
+.egypt-contacts li ,
+.saudia-contacts li,
+.emirates-contacts li {
+    margin: 3% 0 0;
+}
+.contacts ul li{
+    list-style: none;
+    color:#fff;
+    padding: 0; 
+}
+
+.contacts ul li i {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+}
+.contacts ul li a:hover {
+    color:#fff; 
+}
+.comment{
+    padding-top:3% ;
+}
+.comment input{
+    width:90%;
+    margin: 1% auto;
+    padding: 2%;
+    border-radius: 5px;
+    text-transform: capitalize;
+    display: block;
+    text-transform: 1s;
+}
+.comment textarea{
+    border-radius: 5px;
+    padding: 2%;
+    display: block;
+    margin: 1% auto;
+    width:90%;
+}
+.comment button{
+    background: #fff;
+    border-radius: 5px;
+    padding: 1% 2%;
+    display: block;
+    margin: 2% 5%
+}
+
+/* end contacts and comments  */
+
+
+/* start quick links  */
+.quick-links{
+    min-height: 500px;
+    width: 100%;
+    background: #1d1d1d;
+    margin: 5% 0 0;
+}
+.quick-services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    padding: 2%;
+}
+
+.quick-links ul {
+    margin: 1% auto;
+    width: 30%;
+    /* background: rgb(189, 34, 34); */
+    padding: 1%;
+}
+
+.quick-links ul li {
+    font-size: 15px;
+    list-style: none;
+    }
+.quick-links ul li a{
+color: #f4742a
+}
+
+.quick-links h3{
+    color: #fff;
+}
+
+
+
+/* end quick links */
+
+/* start tail  */
+.tail{
+    display: flex;
+    margin-top:0; 
+    width:100%;
+    justify-content: space-around;
+    background-color:#272727;
+    position: relative;
+    bottom: 0;
+}
+.tail div{
+    margin: 0 auto;
+    width: 30%;
+    text-align:center; 
+}
+
+.social ul li{
+    display: inline-block;
+    margin:  10% 2% 0;
+}
+
+.social ul li i {
+    font-size: 40px;
+    transition: .6s;
+    color:#fff
+}
+
+.social ul li a i:hover{
+    color:#f4742a;
+    transform: scale(1.3);
+}
+.rights{
+    color:#fff;
+    transition: .6s;
+    line-height: 800%;
+}
+.rights:hover{
+     color:#f4742a;
+}
+
+.signature a{
+    color:#fff;
+}
+.signature a:hover{
+    text-decoration: none;
+}
+.signature i{
+    font-size: 40px;
+    transition: .6s;
+    color:#fff;
+    margin-top:6%; 
+}
+.signature p{
+    color:#fff;
+    margin:  0% 1% ;
+    line-height: 100%;
+    padding: 2% 0 0;
+}
+
+.signature i:hover{
+    color:#f4742a;
+    transform: scale(1.2);
+}
+
+/* end tail  */
+
+
+/* end footer  */
+
+
+
+
+/* start signin  */
+
+
+.signin{
+    background-color:rgba(34, 34, 34, 0.904);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10000;
+    color:#FFF;
+    transition: .5s;
+    visibility:hidden;
+}
+
+.signin .xxx{
+    display:block;
+    margin: 0;
+    float: right;
+    position: relative;
+    right:10%;
+    top:4%;
+}
+
+.signin .xxx i{
+    font-size: 30px;
+    color:#fff;
+}
+.signup{
+    margin:3% auto;
+    height:550px;
+    width:70%;
+    background: rgb(48, 48, 48);
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    transition:.6s;
+}
+.signup h2{
+    text-align: center;
+    padding: 2%;
+    margin-bottom: -4%;
+    font-size: 8vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color:#f4742a;
+    width: 100%;
+}
+.signup input{
+    margin:  0 4%;
+    width: 42%;
+    height: 5%;
+    text-align: center;
+    padding: 2%;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    background: #fff;
+}
+.signup .birthday{
+    margin:  0;
+    width: 12%;
+    height: 5%;
+    text-align: center;
+    padding: 2% 1%;
+    justify-content: space-around;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    background: #fff;
+}
+#mail{
+    position: relative;
+    right:1.5%;
+}
+#year{
+    margin: 0 3% 0 0
+}
+.signup button{
+    margin:  0 4%;
+    width: 42%;
+    height: 5%;
+    line-height: 5%;
+    padding: 2% ;
+    background: none;
+    color:#f4742a;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+
+/* end signup  */
+
+
+/* start login  */
+
+.login{
+    margin:3% auto;
+    height:550px;
+    width:70%;
+    background: rgb(48, 48, 48);
+    display: none;
+}
+.login h2{
+    text-align: center;
+    padding: 1%;
+    margin:3% auto 1%;
+    font-size: 7vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color:#f4742a;
+    width: 100%;
+    transition:.6s;
+}
+.login input{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 5%;
+    text-align: center;
+    padding: 2% 1%;
+    justify-content: space-around;
+    border:#f4742a solid 3px;
+    border-radius: 5px;
+    background: #fff;
+    transition: .8s;
+}
+.written{
+    width:100%;
+    margin: 1%;
+    display: block;
+    text-align: center;
+}
+.forgot{
+    color:#fff;
+    text-align: left;
+    margin-right:5%; 
+    text-transform: capitalize;
+}
+.forgot:hover{
+    color:#f4742a
+}
+
+.login label{
+   color:#fff;
+    text-align: right;
+    margin-right:5%; 
+    position: relative;
+    text-transform: capitalize;
+}
+.login .checkbox{
+    width: 15px;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 110%;
+    bottom: -5%
+}
+
+.login .log-btn{
+    display: block;
+    margin: 1% auto 2%;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #f4742a;
+    color:#fff;
+    transition: .8s;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+#go-for-sign-up{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    color:rgb(0, 0, 0);
+    transition: .8s;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+
+
+.login a:hover {
+    text-decoration: none;
+}
+
+.facebook-log{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;   
+    text-align: center;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #4267b2;
+    color:#fff;
+    transition: .8s;
+}    
+
+.google-log{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;   
+    text-align: center;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #4285f4;
+    color:#fff;
+    transition: .8s;
+}  
+
+.google-log i,
+.facebook-log i{
+    color:rgb(253, 253, 253);
+    float: left;
+    line-height: 90%;
+    font-size: 4vh;
+    /* background-color: #fff; */
+}
+.google-log i{
+    color:#ffffff;
+}
+/* end login  */
+
+/* end signin */
+
+

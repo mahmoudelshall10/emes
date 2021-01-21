@@ -1,0 +1,5 @@
+#0b0b0b black
+#f4742a orange 1
+#f04537 orange 2
+#bebfc1 gray 1
+#5d5c60 gray 2

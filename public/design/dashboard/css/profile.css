@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+ 
+ body{
+    background-color:#272727;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+::placeholder{
+    font-weight: 300
+}
+
+/* start nav bar  */
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 1;
+    background: #1d1d1dfd;
+}
+
+
+nav .logo{
+    float: left;
+}
+nav .logo img{  
+    height: 60px;
+    transition:.5s;
+}
+
+nav ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+nav ul li{ 
+    list-style: none;
+    display: inline;
+}
+nav ul li a,#logIn,#signUp {
+    display: block;
+    line-height: 60px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 5px 20px;
+    transition: .5s;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li ul{
+    display: block;
+     position: absolute;
+     opacity: 0;
+     transition: .5s;
+     visibility: hidden;
+     transform: translatey(0px);
+     background: #1d1d1d;
+ }
+
+ nav ul li:hover ul{
+     opacity: 1;
+     visibility: visible
+ } 
+  nav ul li ul li:hover ul{
+     opacity: 1;
+    display: inline-block;
+     } 
+nav ul li ul li a,#logIn,#signUp{
+    padding: 1px 10px;
+    margin-top:1%; 
+    box-shadow: 0 2px 5px rgb(0, 0, 0, .5);
+    white-space: nowrap;
+}
+
+.active,nav ul li a:hover{
+    color:#f4742a;
+    text-decoration: none;
+}
+
+.knowledge-list,
+.management-list,
+.mep-list,
+.architecture-list{
+    position: absolute;
+    right:100%;
+    top: 0;
+    transition: .6s;
+    color:#fff;
+    display: none;
+    }
+
+.structure-list{
+    position: absolute;
+    right:100%;
+    top:60%;
+    transition: .6s;
+    color:#fff;
+    display: none;
+}
+#logIn,#signUp{
+    cursor: pointer;
+}
+
+#logIn:hover,#signUp:hover{
+    color:#f4742a;
+}
+
+nav ul li ul li a,#logIn,#signUp{
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 5px 20px;
+    transition: .5s;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+nav .btn{
+    margin: 0 5% 0 -5%;
+    background: #f4742a;
+    border: none;
+}
+nav .btn .fas{
+font-size: 20px;
+color: #ffffff;
+padding: 5%;
+}
+nav .btn:hover{
+background-color: #f4742a;
+}
+
+
+
+/* end nav bar  */
+
+
+
+/* start profile style  */
+
+
+.profile-info{
+   width: 80%;
+    margin: 10% auto 5%;
+    padding: 2% 2% 7%;
+    background: #1d1d1d;
+    border:2px solid #f4742a;
+    border-radius: 10px;
+    transition: .6s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profile-info  h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color:#f4742a;
+    font-size: 7vh;
+    position: relative;
+    width: 100%;
+    margin: 5% auto;
+    text-transform: capitalize;
+}
+
+.profile-info h2::before{
+    content:"";
+    width: 60px;
+    height: 3px;
+    background:#f4742a;
+    position: absolute;
+    top: 55%;
+    left:30%;
+    } 
+
+.profile-info h2::after{
+        content:"";
+        width: 60px;
+        height: 3px;
+        background:#f4742a;
+        position: absolute;
+        top: 55%;
+        right:30%;
+    } 
+
+input{
+    color:#fff;
+}
+.name{
+    width: 45%;
+    padding: 1%;
+    border-radius: 5px;
+    border:#f4742a solid 2px;
+    background: #1d1d1d;
+    text-align: center;
+}
+
+.info{
+    color:#ffffff;
+    width: 95%;
+    padding: 1%;
+    border-radius: 5px;
+    border:#f4742a solid 2px;
+    background: #1d1d1d;
+    text-align: center;
+    margin: 5% auto 5%;
+}
+label{
+    color: #f4742a;
+    line-height: 30%;
+    margin: 2% 0;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+.profile-info .birthday{
+    width:25%;
+    padding: 1%;
+    height: 2%;
+    border-radius: 5px;
+    border:#f4742a solid 2px;
+    background: #1d1d1d;
+    text-align: center; 
+}   
+
+.linfo{
+    border-radius: 5px;
+    border:#f4742a solid 2px;
+    background: #1d1d1d;
+    text-align: center; 
+    color:#fff;
+    width: 45%;
+    margin: 5% auto 0;
+    padding: 1%;
+
+}
+
+hr{
+   
+    width: 60%;
+    margin: 10% auto 5%;
+    border: solid 2px #f4742a
+}
+
+h5{
+    color:#ffffff;
+    font-size: 30px;
+    transition: .6s;
+}
+
+
+
+
+/* end profile style  */
+
+
+
+
+/* start tail  */
+.tail{
+    display: flex;
+    margin-top:0; 
+    width:100%;
+    justify-content: space-around;
+    background-color: #1d1d1dfd;;
+    position: relative;
+}
+.tail div{
+    margin: 0 auto;
+    width: 30%;
+    text-align:center; 
+}
+
+.social ul li{
+    display: inline-block;
+    margin:  10% 2% 0;
+}
+
+.social ul li i {
+    font-size: 40px;
+    transition: .6s;
+    color:#fff
+}
+
+.social ul li a i:hover{
+    color:#f4742a;
+    transform: scale(1.3);
+}
+.rights{
+    color:#fff;
+    transition: .6s;
+    line-height: 800%;
+}
+.rights:hover{
+     color:#f4742a;
+}
+
+.signature a{
+    color:#fff;
+}
+.signature a:hover{
+    text-decoration: none;
+}
+.signature i{
+    font-size: 40px;
+    transition: .6s;
+    color:#fff;
+    margin-top:6%; 
+}
+.signature p{
+    color:#fff;
+    margin:  0% 1% ;
+    line-height: 100%;
+    padding: 2% 0 0;
+}
+
+.signature i:hover{
+    color:#f4742a;
+    transform: scale(1.2);
+}
+
+/* end tail  */
+
+
+/* end main services form  */
+
+
+/* ------------------------------------- */
+
+
+
+
+/* start signin  */
+
+
+.signin{
+    background-color:rgba(34, 34, 34, 0.904);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10000;
+    color:#FFF;
+    transition: .5s;
+    visibility:hidden;
+}
+
+.signin .xxx{
+    display:block;
+    margin: 0;
+    float: right;
+    position: relative;
+    right:10%;
+    top:4%;
+}
+
+.signin .xxx i{
+    font-size: 30px;
+    color:#fff;
+}
+.signup{
+    margin:3% auto;
+    height:550px;
+    width:70%;
+    background: rgb(48, 48, 48);
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    transition:.6s;
+}
+.signup h2{
+    text-align: center;
+    padding: 2%;
+    margin-bottom: -4%;
+    font-size: 8vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color:#f4742a;
+    width: 100%;
+}
+.signup input{
+    margin:  0 4%;
+    width: 42%;
+    height: 5%;
+    text-align: center;
+    padding: 2%;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    background: #fff;
+}
+.signup .birthday{
+    margin:  0;
+    width: 12%;
+    height: 5%;
+    text-align: center;
+    padding: 2% 1%;
+    justify-content: space-around;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    background: #fff;
+}
+#mail{
+    position: relative;
+    right:1.5%;
+}
+#year{
+    margin: 0 3% 0 0
+}
+.signup button{
+    margin:  0 4%;
+    width: 42%;
+    height: 5%;
+    line-height: 5%;
+    padding: 2% ;
+    background: none;
+    color:#f4742a;
+    border:#f4742a solid 2px;
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+
+/* end signup  */
+
+
+/* start login  */
+
+.login{
+    margin:3% auto;
+    height:550px;
+    width:70%;
+    background: rgb(48, 48, 48);
+    display: none;
+}
+.login h2{
+    text-align: center;
+    padding: 1%;
+    margin:3% auto 1%;
+    font-size: 7vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color:#f4742a;
+    width: 100%;
+    transition:.6s;
+}
+.login input{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 5%;
+    text-align: center;
+    padding: 2% 1%;
+    justify-content: space-around;
+    border:#f4742a solid 3px;
+    border-radius: 5px;
+    background: #fff;
+    transition: .8s;
+}
+.written{
+    width:100%;
+    margin: 1%;
+    display: block;
+    text-align: center;
+}
+.forgot{
+    color:#fff;
+    text-align: left;
+    margin-right:5%; 
+    text-transform: capitalize;
+}
+.forgot:hover{
+    color:#f4742a
+}
+
+.login label{
+   color:#fff;
+    text-align: right;
+    margin-right:5%; 
+    position: relative;
+    text-transform: capitalize;
+}
+.login .checkbox{
+    width: 15px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: 10%;
+    top: 3px;
+}
+
+.login .log-btn{
+    display: block;
+    margin: 1% auto 2%;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #f4742a;
+    color:#fff;
+    transition: .8s;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+#go-for-sign-up{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #ffffff;
+    color:rgb(0, 0, 0);
+    transition: .8s;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+
+
+.login a:hover {
+    text-decoration: none;
+}
+
+.facebook-log{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;   
+    text-align: center;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #4267b2;
+    color:#fff;
+    transition: .8s;
+}    
+
+.google-log{
+    display: block;
+    margin: 2% auto;
+    width: 45%;
+    height: 8%;
+    line-height: 90%;
+    text-align: center;
+    padding: 1%;
+    font-size: 4vh;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: bolder;
+    text-transform: capitalize;   
+    text-align: center;
+    border:#fff solid 3px;
+    border-radius: 5px;
+    background: #4285f4;
+    color:#fff;
+    transition: .8s;
+}  
+
+.google-log i,
+.facebook-log i{
+    color:rgb(253, 253, 253);
+    float: left;
+    line-height: 90%;
+    font-size: 4vh;
+    /* background-color: #fff; */
+}
+.google-log i{
+    color:#ffffff;
+}
+/* end login  */
+
+/* end signin */
+
+
